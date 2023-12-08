@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.irpoappdemo.Controllers.Controller">
+   <children>
+      <AnchorPane fx:id="FormWindow" prefHeight="780.0" prefWidth="700.0" style="-fx-background-color: #2e3348;">
+         <children>
+             <GridPane fx:id="GrPane" layoutX="-1.0" prefHeight="780.0" prefWidth="700.0">
+                 <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="453.0" minWidth="0.0" prefWidth="261.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="10.0" prefWidth="90.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="10.0" prefWidth="55.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="190.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                     <RowConstraints maxHeight="277.0" minHeight="0.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="520.0" minHeight="0.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="520.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="520.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="650.0" minHeight="10.0" prefHeight="670.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                 <padding>
+                     <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                 </padding>
+                 <Label fx:id="LbZ" text="Введите t1:" textFill="#fafafa" />
+                 <Label fx:id="LbH2" text="Введите dt:" textFill="#fafafa" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                 </Label>
+                 <Label fx:id="LbH1" text="Введите t2:" textFill="#fafafa" GridPane.columnIndex="2" />
+                 <Label fx:id="LbH3" text="Введите z:" textFill="#fafafa" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets top="5.0" />
+                    </GridPane.margin>
+                 </Label>
+                 <TextField fx:id="TxtT1" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="20.0" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                 </TextField>
+                 <TextField fx:id="TxtDt" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                 </TextField>
+                 <TextField fx:id="TxtT2" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="20.0" GridPane.columnIndex="3" GridPane.columnSpan="2" />
+                 <TextField fx:id="TxtZ" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="20.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                 </TextField>
+               <Label text="Вывод уравнений с результатом:" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+               <Button fx:id="ExitBtn" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#onClickExit" prefHeight="25.0" text="Закрыть программу" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+                 <Button fx:id="EnterBtn" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#onClickResult" prefHeight="20.0" text="Решить задчу" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                 </Button>
+               <Label text="Уравнение:" textFill="#fffefe" GridPane.rowIndex="2" />
+               <ComboBox fx:id="CbEquation" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Выберите уравнение" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <GridPane.margin>
+                     <Insets right="10.0" />
+                  </GridPane.margin>
+               </ComboBox>
+               <SplitPane dividerPositions="0.8797687861271677" orientation="VERTICAL" prefHeight="579.0" prefWidth="117.0" GridPane.columnSpan="5" GridPane.rowIndex="4">
+                  <items>
+                       <ListView fx:id="ListBxResult" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="670.0" />
+                     <ListView fx:id="LsMin" prefHeight="200.0" prefWidth="200.0" />
+                  </items></SplitPane>
+             </GridPane>
+         </children></AnchorPane>
+   </children>
+</VBox>
