@@ -7,7 +7,7 @@ import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static sample.irpoappdemo.Calculating.Calculate.valueEquation;
+import static sample.irpoappdemo.Calculating.Calculate.calculating;
 
 public class Controller implements Initializable {
     @FXML
@@ -79,7 +79,7 @@ public class Controller implements Initializable {
             double dh = Double.parseDouble(dtString);
             double Ze = Double.parseDouble(zeString);
 
-            valueEquation(h1, h2, dh, Ze,
+            calculating(h1, h2, dh, Ze,
                     ListBxResult, LsMin, CbEquation);
         }
     }
@@ -92,5 +92,6 @@ public class Controller implements Initializable {
                 "x1 = 3, x2 = 3.43, x3 = 2.7",
                 "x1 = 3.7, x2 = 3.29, x3 = 2.9"};
         CbEquation.getItems().addAll(items);
+        CbEquation.getSelectionModel().select(0);
     }
 }

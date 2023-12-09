@@ -36,7 +36,7 @@
                     </GridPane.margin>
                  </Label>
                  <Label fx:id="LbH1" text="Введите t2:" textFill="#fafafa" GridPane.columnIndex="2" />
-                 <Label fx:id="LbH3" text="Введите z:" textFill="#fafafa" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                 <Label fx:id="LbH3" text="Введите Ze:" textFill="#fafafa" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <GridPane.margin>
                         <Insets top="5.0" />
                     </GridPane.margin>
@@ -74,8 +74,8 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                  </Button>
-               <Label text="Уравнение:" textFill="#fffefe" GridPane.rowIndex="2" />
-               <ComboBox fx:id="CbEquation" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Выберите уравнение" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <Label text="Значения X:" textFill="#fffefe" GridPane.rowIndex="2" />
+               <ComboBox fx:id="CbEquation" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                   <cursor>
                      <Cursor fx:constant="HAND" />
                   </cursor>
